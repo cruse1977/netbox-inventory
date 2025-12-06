@@ -3,6 +3,13 @@
 import django.db.models.deletion
 from django.db import migrations, models
 
+def rebuild_tree(apps, schema_editor):
+    from ..models import InventoryItemGroup
+
+    if hasattr(InventoryItemGroup, '_tree_manager'):
+        InventoryItemGroup._tree_manager.rebuild()
+
+
 
 class Migration(migrations.Migration):
 
