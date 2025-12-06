@@ -24,4 +24,5 @@ class Migration(migrations.Migration):
             name='owner',
             field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='users.owner'),
         ),
+        migrations.RunPython(rebuild_tree, migrations.RunPython.noop),
     ]
