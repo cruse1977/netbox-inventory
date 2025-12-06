@@ -2,6 +2,7 @@
 
 import django.db.models.deletion
 from django.db import migrations, models
+import mptt.fields
 
 def rebuild_tree(apps, schema_editor):
     from ..models import InventoryItemGroup
