@@ -63,7 +63,7 @@ class Migration(migrations.Migration):
             name='name',
             field=models.CharField(max_length=100),
         ),
-        migrations.RunPython(rebuild_tree, migrations.RunPython.noop),
+        #migrations.RunPython(rebuild_tree, migrations.RunPython.noop),
         migrations.AddConstraint(
             model_name='inventoryitemgroup',
             constraint=models.UniqueConstraint(
